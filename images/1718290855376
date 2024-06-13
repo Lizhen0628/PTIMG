@@ -1,0 +1,349 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>TTG :: 用户登录</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link type="image/x-icon" href="/favicon.ico" rel="icon" />
+    <link type="image/x-icon" href="/favicon.ico" rel="shortcut icon" />
+    <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="/css/login.css?200716" />
+    <script type="text/javascript" src="/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="/js/bootstrap.min.js"></script>
+    <meta name="keywords" content="TTG,套套哥,听听歌"/>
+    <meta name="description" content="totheglory,套套哥,听听歌"/>
+</head>
+<body>
+  <div class="container">
+    <div style="width:630px;height:75px;position:relative;">
+      <!--<div class="site_logo"></div>-->
+      <div style="position:absolute; bottom:0px;right:0;">
+      <form id="frm_change_language" class="inlineblock">
+        <div class="btn-group dropdown">
+            <button id="b_language" type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">English<span class="caret"></span></button>
+            <ul id="list_language" class="dropdown-menu dropdown-menu-right">
+                <li><a href="javascript:void(0)" rel="eng" class="linkform colordarkgray pointer notranslate currency_item" translate="no">English</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="javascript:void(0)" rel="chn" class="linkform colordarkgray pointer notranslate currency_item" translate="no">中文简体</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="javascript:void(0)" rel="fan" class="linkform colordarkgray pointer notranslate currency_item" translate="no">中文繁體</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="javascript:void(0)" rel="kor" class="linkform colordarkgray pointer notranslate currency_item" translate="no">한국어</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="javascript:void(0)" rel="jap" class="linkform colordarkgray pointer notranslate currency_item" translate="no">日本語</a></li>
+            </ul>
+        </div>
+      </form></div>
+    </div>
+    <div class="login">
+      <div class="login-screen chn active">
+        <p><b>[6]</b> 次失败登录会导致你的 IP 被禁止。</p>
+        <p>你还有 <b><font color=green size=4><font color=green size=4>6</font></font></b> 次登录机会。</p>
+        <div class="login-form" left="378">
+          <form method="post" action="takelogin.php" enctype="multipart/form-data">
+            <div class="control-group">
+              <label class="login-field-icon glyphicon glyphicon-user" for="login-name"></label>
+              <input type="text" class="login-field" value="" placeholder="请输入用户名" id="login-name" name="username" />
+            </div>
+            <div class="control-group">
+              <label class="login-field-icon glyphicon glyphicon-lock" for="login-pass"></label>
+              <input type="password" class="login-field" value="" placeholder="密码" id="login-pass" name="password" />
+            </div>
+            <div class="btn-group">
+              <button class="btn btn-default dropdown-toggle login-field" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <span style="float: left;" id="pashow">安全提问（未设置请忽略）</span> <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu login-field">
+                <li><a href="javascript:void(0)" class="dropdown-menu-menu" id="1">什么时候开始玩PT的</a></li>
+                <li><a href="javascript:void(0)" class="dropdown-menu-menu" id="2">通过什么途径知道TTG的</a></li>
+                <li><a href="javascript:void(0)" class="dropdown-menu-menu" id="3">你在电影院看的第一部电影的名称</a></li>
+                <li><a href="javascript:void(0)" class="dropdown-menu-menu" id="4">你最喜欢电影的名称</a></li>
+                <li><a href="javascript:void(0)" class="dropdown-menu-menu" id="5">你最喜欢AV女优的名称</a></li>
+                <li><a href="javascript:void(0)" class="dropdown-menu-menu" id="6">你最喜欢演员的名称</a></li>
+                <li><a href="javascript:void(0)" class="dropdown-menu-menu" id="7">你最期待电影的名称</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="javascript:void(0)" class="dropdown-menu-menu" id="0">安全提问（未设置请忽略）</a></li>
+              </ul>
+            </div>
+            <div class="control-group" style="display:none;" id="passan1">
+              <input type="text" class="login-field" value="" placeholder="安全问题答案" id="login-passan" name="passan" />
+              <label class="login-field-icon glyphicon glyphicon-eye-open" for="login-passan"></label>
+            </div>
+            <input type="hidden" value="0" name="passid" />
+            <input type="hidden" value="0" name="lang" />
+<input type="hidden" name="returnto" value="/t/667707/" />
+            <div class="btn-group">
+              <div><input type="submit" value="登录" class="btn btn-primary btn-large" /></div>
+            </div>
+          </form>
+          </br>
+            <p><font color=red><b>如果你没有帐号，可尝试参加活动获取进站机会，活动地址：<a href="/announc_note.php">&gt;&gt;请点击&lt;&lt;</a></b></font></p>
+            <p><font color=green>若需重置双重验证、安全问题或失效注册邮箱的等，<a href="announc_note.php?type=help" class="login-link">&gt;&gt;请点击&lt;&lt;</a></font></p>
+            <p>如果登录异常，那么请清除你的 cookie，重启浏览器再试。</p>
+            <p>如果你忘记了自己的密码，请使用我们的<a href="recover.php" class="login-link">找回密码</a>工具。</p>
+        </div>
+      </div>
+      <div class="login-screen fan">
+        <p><b>[6]</b> 次失敗登錄會導致你的 IP 被禁止。</p>
+        <p>你還有 <b><font color=green size=4>6</font></b> 次登錄機會。</p>
+        <div class="login-form" left="378">
+          <form method="post" action="takelogin.php" enctype="multipart/form-data">
+            <div class="control-group">
+              <input type="text" class="login-field" value="" placeholder="請輸入用戶名" id="login-name" name="username" />
+              <label class="login-field-icon glyphicon glyphicon-user" for="login-name"></label>
+            </div>
+            <div class="control-group">
+              <input type="password" class="login-field" value="" placeholder="密碼" id="login-pass" name="password" />
+              <label class="login-field-icon glyphicon glyphicon-lock" for="login-pass"></label>
+            </div>
+            <div class="btn-group">
+              <button class="btn btn-default dropdown-toggle login-field" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <span style="float: left;" id="pashow">安全提問（未設置請忽略）</span> <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu login-field">
+                <li><a href="javascript:void(0)" class="dropdown-menu-menu" id="1">什麼時候開始玩PT的</a></li>
+                <li><a href="javascript:void(0)" class="dropdown-menu-menu" id="2">通過什麼途徑知道TTG的</a></li>
+                <li><a href="javascript:void(0)" class="dropdown-menu-menu" id="3">你在電影院看的第一部電影的名稱</a></li>
+                <li><a href="javascript:void(0)" class="dropdown-menu-menu" id="4">你最喜歡電影的名稱</a></li>
+                <li><a href="javascript:void(0)" class="dropdown-menu-menu" id="5">你最喜歡AV女優的名稱</a></li>
+                <li><a href="javascript:void(0)" class="dropdown-menu-menu" id="6">你最喜歡演員的名稱</a></li>
+                <li><a href="javascript:void(0)" class="dropdown-menu-menu" id="7">你最期待電影的名稱</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="javascript:void(0)" class="dropdown-menu-menu" id="0">安全提問（未設置請忽略）</a></li>
+              </ul>
+            </div>
+            <div class="control-group" style="display:none;" id="passan1">
+              <input type="text" class="login-field" value="" placeholder="安全問題答案" id="login-passan" name="passan" />
+              <label class="login-field-icon glyphicon glyphicon-eye-open" for="login-passan"></label>
+            </div>
+            <input type="hidden" value="0" name="passid" />
+            <input type="hidden" value="1" name="lang" />
+<input type="hidden" name="returnto" value="/t/667707/" />
+            <div class="btn-group">
+              <div><input type="submit" value="登錄" class="btn btn-primary btn-large" /></div>
+            </div>
+          </form>
+          </br>
+            <p><font color=red><b>如果你沒有帳號，可嘗試參加活動獲取進站機會，活動地址：<a href="/announc_note.php">&gt;&gt;請點擊&lt;&lt;</a></b></font></p>
+            <p><font color=green>若需重置雙重驗證、安全問題或失效註冊郵箱的等：<a href="announc_note.php?type=help" class="login-link">&gt;&gt;請點擊&lt;&lt;</a></font></p>
+            <p>如果登錄異常，那麼請清除你的 cookie，重啟瀏覽器再試。</p>
+            <p>如果你忘記了自己的密碼，請使用我們的<a href="recover.php" class="login-link">找回密碼</a>工具。</p>
+        </div>
+      </div>
+      <div class="login-screen eng">
+        <p><b>[6]</b> failed logins will get your IP banned!</p>
+        <p>You have <b><font color=green size=4><font color=green size=4>6</font></font></b> remaining tries.</p>
+        <div class="login-form" left="418">
+          <form method="post" action="takelogin.php" enctype="multipart/form-data">
+            <div class="control-group">
+              <input type="text" class="login-field" value="" placeholder="Enter your username" id="login-name" name="username" />
+              <label class="login-field-icon glyphicon glyphicon-user" for="login-name"></label>
+            </div>
+            <div class="control-group">
+              <input type="password" class="login-field" value="" placeholder="Password" id="login-pass" name="password" />
+              <label class="login-field-icon glyphicon glyphicon-lock" for="login-pass"></label>
+            </div>
+            <div class="btn-group">
+              <button class="btn btn-default dropdown-toggle login-field" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <span style="float: left;" id="pashow">Security question (ignore if you haven't set any)</span> <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu login-field">
+                <li><a href="javascript:void(0)" class="dropdown-menu-menu" id="1">When did your start using PT?</a></li>
+                <li><a href="javascript:void(0)" class="dropdown-menu-menu" id="2">How did you get to know about TTG?</a></li>
+                <li><a href="javascript:void(0)" class="dropdown-menu-menu" id="3">What's the name of the first movie you watched in a cinema?</a></li>
+                <li><a href="javascript:void(0)" class="dropdown-menu-menu" id="4">What's your favorite movie?</a></li>
+                <li><a href="javascript:void(0)" class="dropdown-menu-menu" id="5">Who's your favorite porn star?</a></li>
+                <li><a href="javascript:void(0)" class="dropdown-menu-menu" id="6">Who's your favorite actor/actress?</a></li>
+                <li><a href="javascript:void(0)" class="dropdown-menu-menu" id="7">What's your most anticipated movie?</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="javascript:void(0)" class="dropdown-menu-menu" id="0">Security question (Ignore not set)</a></li>
+              </ul>
+            </div>
+            <div class="control-group" style="display:none;" id="passan1">
+              <input type="text" class="login-field" value="" placeholder="Answer" id="login-passan" name="passan" />
+              <label class="login-field-icon glyphicon glyphicon-eye-open" for="login-passan"></label>
+            </div>
+            <input type="hidden" value="0" name="passid" />
+            <input type="hidden" value="2" name="lang" />
+<input type="hidden" name="returnto" value="/t/667707/" />
+            <div class="btn-group">
+              <div><input type="submit" value="Login" class="btn btn-primary btn-large" /></div>
+            </div>
+          </form>
+          </br>
+            <p>Don't have an account? Turn to your friend in TTG to get an invite!</p>
+            <p><font color="green">If you need to reset two-step verification, security issues or invalid registration email：<a href="announc_note.php?type=help" class="login-link">please click here</a></font></p>
+            <p><font color=red>If you have problems loging in, try cleaning cookies and restarting your browser.</font></p>
+            <p>Forget your password? <a href="recover.php" class="login-link">Recover your password</a> via email.</p>
+        </div>
+      </div>
+      <div class="login-screen jap">
+        <p>ログインで<b>[6]</b> 回以上失敗すると、あなたのIPアドレスがアクセス禁止になります。</p>
+        <p>あなたはまだ <b><font color=green size=4><font color=green size=4>6</font></font></b> 回ログインのチャンスがあります。</p>
+        <div class="login-form" left="398">
+          <form method="post" action="takelogin.php" enctype="multipart/form-data">
+            <div class="control-group">
+              <input type="text" class="login-field" value="" placeholder="ユーザー" id="login-name" name="username" />
+              <label class="login-field-icon glyphicon glyphicon-user" for="login-name"></label>
+            </div>
+            <div class="control-group">
+              <input type="password" class="login-field" value="" placeholder="パスワード" id="login-pass" name="password" />
+              <label class="login-field-icon glyphicon glyphicon-lock" for="login-pass"></label>
+            </div>
+            <div class="btn-group">
+              <button class="btn btn-default dropdown-toggle login-field" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <span style="float: left;" id="pashow">セキュリティー質問（設定していなければ無視してください）</span> <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu login-field">
+                <li><a href="javascript:void(0)" class="dropdown-menu-menu" id="1">いつからPTを遊び始めたのか</a></li>
+                <li><a href="javascript:void(0)" class="dropdown-menu-menu" id="2">どこからTTGを知っているのか？</a></li>
+                <li><a href="javascript:void(0)" class="dropdown-menu-menu" id="3">初めて映画館で見ている映画の名前</a></li>
+                <li><a href="javascript:void(0)" class="dropdown-menu-menu" id="4">一番好きな映画の名称</a></li>
+                <li><a href="javascript:void(0)" class="dropdown-menu-menu" id="5">一番好きなAV女優の名前</a></li>
+                <li><a href="javascript:void(0)" class="dropdown-menu-menu" id="6">一番好きな俳優の名前</a></li>
+                <li><a href="javascript:void(0)" class="dropdown-menu-menu" id="7">一番期待してる映画の名前</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="javascript:void(0)" class="dropdown-menu-menu" id="0">セキュリティー質問（設定していなければ無視してください）</a></li>
+              </ul>
+            </div>
+            <div class="control-group" style="display:none;" id="passan1">
+              <input type="text" class="login-field" value="" placeholder="の答えは" id="login-passan" name="passan" />
+              <label class="login-field-icon glyphicon glyphicon-eye-open" for="login-passan"></label>
+            </div>
+            <input type="hidden" value="0" name="passid" />
+            <input type="hidden" value="3" name="lang" />
+<input type="hidden" name="returnto" value="/t/667707/" />
+            <div class="btn-group">
+              <div><input type="submit" value="ログイン" class="btn btn-primary btn-large" /></div>
+            </div>
+          </form>
+          </br>
+          <p>アカウントがない場合、本サイトのメンバーから招待コードをもらってください。</p>
+          <p><font color=green>ログインが異常な場合、クッキーを削除し、ブラウザを再起動してください。</font></p>
+          <p><a href="recover.php">パスワードを忘れた場合、こちらへ</a>。</p>
+          <p><a href="announc_note.php?type=help" class="login-link">2段階認証プロセス、セキュリティの問題、または無効な登録メールをリセットする必要がある場合は、ここをクリックしてください</a></p>
+        </div>
+      </div>
+      <div class="login-screen kor">
+        <p>로그인을 <b>[6]</b> 번 이상 실패하면 IP가 차단됩니다.</p>
+        <p>로그인 기회가 <b><font color=green size=4><font color=green size=4>6</font></font></b> 번 남았습니다.</p>
+        <div class="login-form" left="438">
+          <form method="post" action="takelogin.php" enctype="multipart/form-data">
+            <div class="control-group">
+              <input type="text" class="login-field" value="" placeholder="사용자명" id="login-name" name="username" />
+              <label class="login-field-icon glyphicon glyphicon-user" for="login-name"></label>
+            </div>
+            <div class="control-group">
+              <input type="password" class="login-field" value="" placeholder="비밀번호" id="login-pass" name="password" />
+              <label class="login-field-icon glyphicon glyphicon-lock" for="login-pass"></label>
+            </div>
+            <div class="btn-group">
+              <button class="btn btn-default dropdown-toggle login-field" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <span style="float: left;" id="pashow">보안 질문 (지정하지 않았으면 무시하세요)</span> <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu login-field">
+                <li><a href="javascript:void(0)" class="dropdown-menu-menu" id="1">언제부터 비공개 트래커를 이용하기 시작했습니까?</a></li>
+                <li><a href="javascript:void(0)" class="dropdown-menu-menu" id="2">TTG를 알게된 경로는 무엇입니까?</a></li>
+                <li><a href="javascript:void(0)" class="dropdown-menu-menu" id="3">극장에서 처음 본 영화의 제목이 무엇입니까?</a></li>
+                <li><a href="javascript:void(0)" class="dropdown-menu-menu" id="4">좋아하는 영화는 무엇입니까?</a></li>
+                <li><a href="javascript:void(0)" class="dropdown-menu-menu" id="5">좋아하는 포르노 배우는 누구입니까?</a></li>
+                <li><a href="javascript:void(0)" class="dropdown-menu-menu" id="6">좋아하는 배우는 누구입니까?</a></li>
+                <li><a href="javascript:void(0)" class="dropdown-menu-menu" id="7">가장 기대되는 영화는 무엇입니까?</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="javascript:void(0)" class="dropdown-menu-menu" id="0">보안 질문 (지정하지 않았으면 무시하세요)</a></li>
+              </ul>
+            </div>
+            <div class="control-group" style="display:none;" id="passan1">
+              <input type="text" class="login-field" value="" placeholder="답" id="login-passan" name="passan" />
+              <label class="login-field-icon glyphicon glyphicon-eye-open" for="login-passan"></label>
+            </div>
+            <input type="hidden" value="0" name="passid" />
+            <input type="hidden" value="4" name="lang" />
+<input type="hidden" name="returnto" value="/t/667707/" />
+            <div class="btn-group">
+              <div><input type="submit" value="로그인" class="btn btn-primary btn-large" /></div>
+            </div>
+          </form>
+          </br>
+            <p>계정이 없으신가요? 친구에게 초대장을 부탁해 보세요.</p>
+            <p><font color=green>로그인이 되지 않으면 쿠키를 삭제하고 브라우저를 재시작 해보세요.</font></p>
+            <p>비밀번호가 기억나지 않는 경우 <a href="recover.php">여기</a>.</p>
+            <p><a href="announc_note.php?type=help" class="login-link">2 단계 인증, 보안 문제 또는 유효하지 않은 등록 이메일을 재설정해야하는 경우 여기를 클릭하십시오.</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript">
+    $(document).ready(function() {
+        $('input[name="passid"]').val(0);
+        $('.login input[type="submit"]').click(function() {
+            var val = $('.login div.active input[name="username"]').val();
+            if ('' == val) {
+                alert("Username can not be empty!");
+                return false;
+            }
+            var val = $('.login div.active input[name="password"]').val();
+            if ('' == val) {
+                alert("Password can not be empty!");
+                return false;
+            }
+        });
+
+        $('.dropdown-menu-menu').click(function() {
+            var menus = new Array(["安全提问（未设置请忽略）","什么时候开始玩PT的","通过什么途径知道TTG的","你在电影院看的第一部电影的名称","你最喜欢电影的名称","你最喜欢AV女优的名称","你最喜欢演员的名称","你最期待电影的名称"],
+                                  ["安全提問（未設置請忽略）","什麼時候開始玩PT的","通過什麼途徑知道TTG的","你在電影院看的第一部電影的名稱","你最喜歡電影的名稱","你最喜歡AV女優的名稱","你最喜歡演員的名稱","你最期待電影的名稱"],
+                                  ["Security question (ignore if you haven't set any)","When did your start using PT?","How did you get to know about TTG?","What's the name of the first movie you watched in a cinema?","What's your favorite movie?","Who's your favorite porn star?","Who's your favorite actor/actress?","What's your most anticipated movie?"],
+                                  ["セキュリティー質問（設定していなければ無視してください）","いつからPTを遊び始めたのか","どこからTTGを知っているのか？","初めて映画館で見ている映画の名前","一番好きな映画の名称","一番好きなAV女優の名前","一番好きな俳優の名前","一番期待してる映画の名前"],
+                                  ["보안 질문 (지정하지 않았으면 무시하세요)","언제부터 비공개 트래커를 이용하기 시작했습니까?","TTG를 알게된 경로는 무엇입니까?","극장에서 처음 본 영화의 제목이 무엇입니까?","좋아하는 영화는 무엇입니까?","좋아하는 포르노 배우는 누구입니까?","좋아하는 배우는 누구입니까?","가장 기대되는 영화는 무엇입니까?"]);
+            var lang = $('div.active').find('input[name="lang"]').val();
+            var val = parseInt($(this).attr("id"));
+            if (val > 7)
+                val = 0;
+            $('div.active').find('span#pashow').html(menus[lang][val]);
+            $('div.active').find('input[name="passid"]').val(val);
+            if (0 != val) {
+                $('div.active').find('#passan1').css('display','block');
+            } else {
+                $('div.active').find('#passan1').css('display','none');
+            }
+        });
+
+        $(".todo").click(function() {
+            $(this).toggleClass("todo-done");
+            if ($(this).hasClass('todo-done')) {
+                $(this).find("input[name=rememberme]").val("yes");
+            } else {
+                $(this).find("input[name=rememberme]").val("no");
+            }
+        });
+
+        var $form_login = $('div.login'),
+        $currentForm = $form_login.children('div.active'),
+        $linkForm = $('div').find('.linkform');
+
+        $form_login.children('div').each(function(i){
+            var $theForm = $(this);
+            if(!$theForm.hasClass('active'))
+                $theForm.hide();
+        });
+
+        $linkForm.bind('click',function(e){
+            var $link = $(this);
+            var target = $link.attr('rel');
+            $currentForm.fadeOut(0,function(){
+                $currentForm.removeClass('active');
+                $currentForm= $form_login.children('div.'+target);
+                $form_login.stop().animate({
+                    width  : $currentForm.data('width') + 'px',
+                    height : $currentForm.data('height') + 'px'
+                },0,function(){
+                    $currentForm.addClass('active');
+                    $currentForm.fadeIn(0);
+                    $("button#b_language").html($link.text()+"<span class=\"caret\"></span>");
+                });
+            });
+            e.preventDefault();
+        });
+    });
+  </script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'8932f3f1da89849a',t:'MTcxODI5MDg1NS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
